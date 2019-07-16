@@ -1,32 +1,27 @@
 package com.junbao.miaosha.redis;
 
-/**
- * @author 小笨蛋
- */
-public abstract class BasePrefix implements KeyPrefix {
+public abstract class BasePrefix implements KeyPrefix{
+	
+	private int expireSeconds;
+	
+	private String prefix;
+	
+	public BasePrefix(String prefix) {//0代表永不过期
+		this(0, prefix);
+	}
+	
+	public BasePrefix( int expireSeconds, String prefix) {
+		this.expireSeconds = expireSeconds;
+		this.prefix = prefix;
+	}
+	
+	public int expireSeconds() {//默认0代表永不过期
+		return expireSeconds;
+	}
 
-    private int expireSencods;
+	public String getPrefix() {
+		String className = getClass().getSimpleName();
+		return className+":" + prefix;
+	}
 
-    private String prefix;
-
-    public BasePrefix( String prefix) {
-        this.expireSencods = 0;
-        this.prefix = prefix;
-    }
-
-    public BasePrefix(int expireSencods, String prefix) {
-        this.expireSencods = expireSencods;
-        this.prefix = prefix;
-    }
-
-    @Override
-    public int expireSeconds() { // 默认0代表永不过期
-        return expireSencods;
-    }
-
-    @Override
-    public String getPrefix() {
-        String className = getClass().getSimpleName();
-        return className + prefix;
-    }
 }

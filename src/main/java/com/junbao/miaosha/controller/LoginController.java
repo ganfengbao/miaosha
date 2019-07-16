@@ -3,9 +3,9 @@ package com.junbao.miaosha.controller;
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
+import com.junbao.miaosha.redis.RedisService;
 import com.junbao.miaosha.result.Result;
 import com.junbao.miaosha.service.MiaoshaUserService;
-import com.junbao.miaosha.service.RedisService;
 import com.junbao.miaosha.vo.LoginVo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

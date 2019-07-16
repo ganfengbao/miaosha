@@ -7,6 +7,7 @@ import com.junbao.miaosha.dao.MiaoshaUserDao;
 import com.junbao.miaosha.domain.MiaoshaUser;
 import com.junbao.miaosha.exception.GlobalException;
 import com.junbao.miaosha.redis.MiaoshaUserKey;
+import com.junbao.miaosha.redis.RedisService;
 import com.junbao.miaosha.result.CodeMsg;
 import com.junbao.miaosha.util.MD5Util;
 import com.junbao.miaosha.util.UUIDUtil;

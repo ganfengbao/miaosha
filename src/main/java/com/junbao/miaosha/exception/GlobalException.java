@@ -3,6 +3,9 @@ package com.junbao.miaosha.exception;
 
 import com.junbao.miaosha.result.CodeMsg;
 
+/**
+ * @author 小笨蛋
+ */
 public class GlobalException extends RuntimeException{
 
 	private static final long serialVersionUID = 1L;
